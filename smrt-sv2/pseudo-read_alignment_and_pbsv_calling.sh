@@ -5,6 +5,7 @@
 # smrt-sv2 pipeline creates many intermediate bam files containing aligned contigs to different regions of the genome
 # Using 'samtools fastq', the assembled contig 'reads' were extracted from the bam files, and merged across loci
 # This is the 'merged.bam_derived.fastq' file on this script
+# Then we perform joint genotype calling using pbsv
 
 # Load environment
 eval "$(conda shell.bash hook)"
