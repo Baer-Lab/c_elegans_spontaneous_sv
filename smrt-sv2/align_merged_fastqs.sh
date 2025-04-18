@@ -1,6 +1,11 @@
 #!/bin/bash
 
 
+# This step aligns 'pseudo-reads', which are assembled contigs from the smrt-sv2 pipeline, to the WS270 genome
+# smrt-sv2 pipeline creates many intermediate bam files containing aligned contigs to different regions of the genome
+# Using 'samtools fastq', the assembled contig 'reads' were extracted from the bam files, and merged across loci
+# This is the 'merged.bam_derived.fastq' file on this script
+
 # Load environment
 eval "$(conda shell.bash hook)"
 conda activate bioconda
